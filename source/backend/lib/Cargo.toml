@@ -1,0 +1,26 @@
+[package]
+name = "infrastructure"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[lib]
+name = "infrastructure"
+path = "./mod.rs"
+test = true
+doctest = true
+bench = true
+doc = true
+proc-macro = false
+harness = true
+edition = "2021"
+crate-type = ["lib"]
+required-features = []
+
+[dependencies]
+crypto = { package = "rust-crypto", version = "^0.2", default-features = true, features = [], optional = false }
+rand = { package = "rand", version = "^0.8.5", default-features = true, features = [], optional = false }
+rmp_serde = { package = "rmp-serde", version = "^0.15", default-features = true, features = [], optional = false }
+serde = { package = "serde", version = "^1.0", default-features = true, features = ["derive"], optional = false }
+tokio = { package = "tokio", version = "^1.16", default-features = true, features = ["full"], optional = false }
+uuid = { package = "uuid", version = "^0.8", default-features = true, features = ["v4", "serde"], optional = false }

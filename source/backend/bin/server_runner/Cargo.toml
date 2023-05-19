@@ -1,0 +1,14 @@
+[package]
+name = "server-runner"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[[bin]]
+name = "server-runner"
+path = "./mod.rs"
+edition = "2021"
+required-features = []
+
+[dependencies]
+infrastructure = { path = "./../../lib", package = "infrastructure", version = "0.1.0", default-features = true, features = [], optional = false }

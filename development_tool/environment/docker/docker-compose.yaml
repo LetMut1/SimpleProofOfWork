@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+    rust:
+        container_name: rust
+        build:
+            context: ./service/rust/
+            dockerfile: dockerfile
+        environment:
+            USER: ${USER}
+        volumes:
+            - ./../../../:/_task
+        working_dir: /_task
+        restart: always
+        ports:
+            - 80:80
+        tty: true
+        init: true

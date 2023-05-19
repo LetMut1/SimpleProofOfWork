@@ -1,0 +1,12 @@
+FROM rust:1.65.0
+
+RUN \
+mkdir -p /_task && \
+rustup default stable && \
+rustup component add \
+    clippy \
+    rust-src && \
+apt-get update && \
+apt-get install -y \
+    pkg-config \
+    libssl-dev \

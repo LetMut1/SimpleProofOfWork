@@ -1,0 +1,44 @@
+{
+    "dockerComposeFile": "./../../environment/docker/docker-compose.yaml",
+    "service": "rust",
+    "workspaceFolder": "/_task",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"ms-azuretools.vscode-docker",
+				"tamasfe.even-better-toml",
+				"irongeek.vscode-env",
+				"ue.alphabetical-sorter",
+				"eamodio.gitlens"
+			],
+			"settings": {
+				"terminal.integrated.profiles.linux": {"bash": {"path": "/bin/bash"}},
+				"files.watcherExclude": {
+					"**/target/**": true
+				},
+				"rust-analyzer.linkedProjects": [
+					"/_task/source/backend/bin/server_runner/Cargo.toml",
+					"/_task/source/backend/lib/Cargo.toml",
+					"/_task/source/client/cli/communicator/Cargo.toml"
+				],
+				"rust-analyzer.updates.askBeforeDownload": false,
+				"rust-analyzer.cargo.allFeatures": true,
+				"rust-analyzer.procMacro.enable": true,
+				"rust-analyzer.inlayHints.enable": false,
+				"rust-analyzer.lens.implementations": false,
+				"rust-analyzer.lens.enable": false,
+				"rust-analyzer.diagnostics.disabled": [
+					"inactive-code"
+				],
+				"rust-analyzer.diagnostics.experimental.enable": false,
+				"rust-analyzer.inlayHints.chainingHints.enable": false,
+				"rust-analyzer.inlayHints.parameterHints.enable": false,
+				"rust-analyzer.inlayHints.typeHints.enable": false,
+				"rust-analyzer.lru.capacity": 4096,
+				"rust-analyzer.inlayHints.closingBraceHints.minLines": 100000,
+				"gitlens.codeLens.enabled": false
+			}
+		}
+	}
+}
